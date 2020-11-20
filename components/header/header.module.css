@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  padding: 26px 0 1rem 0;
+  padding: 1rem 0;
   background-color: #0b1012;
   position: fixed;
   top: 0;
@@ -31,9 +31,9 @@
 }
 
 .logo {
+  flex-shrink: 0;
   width: 2.5rem;
   height: auto;
-  /* color:#76848e; */
 }
 
 .logo img {
@@ -57,4 +57,25 @@
 
 .menu a:hover {
   color: #bfc8ce;
+}
+
+@media screen and (max-width: 767px) {
+  .header{
+    padding: .5rem 0;
+  }
+  .header:before {
+    display: none;
+  }
+
+  .headerInner {
+    flex-direction: column;
+  }
+
+  .menu {
+    margin-top: 0.5rem;
+  }
+
+  .menu a:first-of-type {
+    margin-left: 0;
+  }
 }
