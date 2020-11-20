@@ -1,10 +1,8 @@
-import Link from 'next/link';
-
 import styles from './layout.module.css';
-import SeoHead from './seoHead';
-import Header from './header';
+import SeoHead from '../seoHead';
+import Header from '../header';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div className={styles.wrapper}>
       <SeoHead />
