@@ -14,12 +14,21 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <section className="main-content">
+        <h1>Merhaba, ben Oğuzhan 👋</h1>
+        <p>
+          Frontend development ile ilgili güncel yazılara, içeriklere, notlara
+          ve ipuçlarına ulaşabileceğiniz kişisel blog sayfama hoş geldiniz.
+          Genellikle html, css, javascript, react ve modern frontend development
+          ile ilgili içerikler paylaşıyor olacağım.
+        </p>
+      </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
+              <Link href={`/blog/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
