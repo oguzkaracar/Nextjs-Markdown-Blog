@@ -19,19 +19,15 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
 
-        {postData.description && (
-          <div>
-            <p>{postData.description}</p>
-          </div>
-        )}
+        <div>
+          <p>{postData.description}</p>
+        </div>
 
-        {postData.image && (
-          <div>
-            <img src={postData.image} alt="image" />
-          </div>
-        )}
+        <div>
+          <img src={postData.image} alt="image" />
+        </div>
 
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}  className="post-item"/>
       </article>
     </Layout>
   );
